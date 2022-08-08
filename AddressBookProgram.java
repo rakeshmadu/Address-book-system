@@ -3,55 +3,141 @@ package com.bridgelabz.AddressBook;
 import java.util.Scanner;
 
 public class AddressBookProgram {
-    //	Take input from users to create Contact
-    public static void address() {
+    //variables
+    private String FirstName;
+    private String LastName;
+    private String Address;
+    private String State;
+    private String City;
+    private long ZipCode;
+    private long PhoneNO;
+    private String Email;
+    //getters abd setters  for  each variable
 
-        Scanner sc = new Scanner(System.in);
+    Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter Your First Name: ");
-        String first_name = sc.next();
+    public String getFirstName() {
+        return FirstName;
+    }
 
+    public void setFirstName(String firstName) {
+        FirstName = firstName;
+    }
 
-        System.out.print("Enter Your Last Name: ");
-        String last_name = sc.next();
+    public String getLastName() {
+        return LastName;
+    }
 
+    public void setLastName(String lastName) {
+        LastName = lastName;
+    }
 
-        System.out.print("Enter Your Address: ");
-        String address = sc.next();
+    public String getState() {
+        return State;
+    }
 
-
-        System.out.print("Enter Your City: ");
-        String city = sc.next();
-
-
-        System.out.print("Enter Your State Name: ");
-        String state = sc.next();
-
-
-        System.out.print("Enter Your Zip Code: ");
-        int zip_code = sc.nextInt();
-
-
-        System.out.print("Enter Your Phone Number: ");
-        long phone_number = sc.nextLong();
+    public void setState(String state) {
+        this.State = state;
+    }
 
 
-        System.out.print("Enter Your Email Id: ");
-        String email_id = sc.next();
+    public String getAddress() {
+        return Address;
+    }
 
-        System.out.println("First Name: " + first_name);
-        System.out.println("Last Name : " + last_name);
-        System.out.println("Last Name : " + address);
-        System.out.println("City : " + city);
-        System.out.println("State Name : " + state);
-        System.out.println("Zip Code : " + zip_code);
-        System.out.println("Phone Number : " + phone_number);
-        System.out.println("Email Id : " + email_id);
+    public void setAddress(String address) {
+        this.Address = address;
+    }
+
+    public Long getZipCode() {
+        return ZipCode;
+    }
+
+    public void setZipCode(Long zipCode) {
+        ZipCode = zipCode;
+    }
+
+    public Long getPhoneNO() {
+        return PhoneNO;
+    }
+
+    public void setPhoneNO(Long phoneNO) {
+        PhoneNO = phoneNO;
+    }
+
+    public String getEmail() {
+        return Email;
+    }
+
+    public void setEmail(String email) {
+        Email = email;
+    }
+
+    public String getCity() {
+        return City;
+    }
+
+    public void setCity(String city) {
+        City = city;
+    }
+
+    public void display() {
+        System.out.println("Enter a First name: ");
+        setFirstName(sc.nextLine());
+
+        System.out.println("Enter a Last name: ");
+        setLastName(sc.nextLine());
+
+        System.out.println("Enter a Address: ");
+        setAddress(sc.next());
+
+        System.out.println("Enter a State: ");
+        setState(sc.next());
+
+        System.out.println("Enter a City: ");
+        setCity(sc.next());
+
+
+        System.out.println("Enter a Zipcode: ");
+        setZipCode(sc.nextLong());
+
+
+        System.out.println("Enter a Phone NUmber: ");
+        setPhoneNO(sc.nextLong());
+
+        System.out.println("Enter a Email: ");
+        setEmail(sc.next());
+
+
+        System.out.println("First Name:\t" + this.getFirstName());
+        System.out.println("last name:\t" + this.getLastName());
+        System.out.println("Address:\t" + this.getAddress());
+        System.out.println("State:\t" + this.getState());
+        System.out.println("Zipcode:\t" + this.getZipCode());
+        System.out.println("City:\t" + this.getCity());
+        System.out.println("Phone Number:\t" + this.getPhoneNO());
+        System.out.println("Email:\t" + this.getEmail());
+
+
 
     }
+
     public static void main(String[] args) {
-        System.out.println("Welcome to Address Book Program");
-        address();
-    }
 
+        AddressBookProgram Contact1 = new AddressBookProgram();
+        System.out.println("Enter The Details of Contact1:");
+        Contact1.display();
+
+        // uc_2  added 2 more  contats in AddressBook
+        AddressBookProgram Contact2 = new AddressBookProgram();
+        System.out.println("Enter The Details of Contact2:");
+        Contact2.display();
+
+
+        AddressBookProgram Contact3 = new AddressBookProgram();
+        System.out.println("Enter The Details of Contact3:");
+        Contact3.display();
+
+
+    }
 }
