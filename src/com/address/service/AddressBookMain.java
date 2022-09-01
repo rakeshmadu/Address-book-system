@@ -110,7 +110,7 @@ public class AddressBookMain {
 				adObj.readFromFile();
 				break;
 			case "13":
-				System.out.println(" Good bye!! ");
+				System.out.println(" Good bye!");
 				scan.close();
 				return;
 			default:
